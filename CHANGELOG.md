@@ -5,6 +5,7 @@ Scott Gunther - Add source code from closed source repo
 ## 1.0.0
 
 Scott Gunther - Publish to public npm
+
 ## 0.1.3
 
 Tom Dale - Added ids to be used in acceptance test modeling
