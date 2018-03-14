@@ -1,2 +1,14 @@
 # simulato-test-site
-Test site for simulato
+A simple React site to acceptance test [simulato](https://github.com/GannettDigital/simulato)
+
+## Installation
+
+```sh
+$ npm install
+```
+
+Run on localhost
+
+```sh
+$ npm start
+```
