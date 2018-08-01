@@ -1,8 +1,8 @@
 import React from 'react';
-import {Navbar, Nav, NavItem } from 'react-bootstrap';
+import {Button } from 'react-bootstrap';
 import CreateStoryModal from './create-story-modal.js';
 
-export default class SideBar extends React.Component {
+export default class CreateStoryFooter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,13 +24,11 @@ export default class SideBar extends React.Component {
   render() {
     return (
     <div>
-      <Navbar>
-        <Nav>
-          <NavItem id= "createStoryButton" onClick={this.handleShow}>
-                Create Story
-          </NavItem>
-        </Nav>
-      </Navbar>
+      <footer className="pull-right">
+        <Button bsStyle="primary" id= "createStoryButton" onClick={this.handleShow}>
+          Create Story
+        </Button>
+      </footer>
       <CreateStoryModal
         handleClose={this.handleClose}
         show={this.state.showStoryModal}
