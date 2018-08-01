@@ -40,7 +40,7 @@ export default class CreateStoryModal extends React.Component {
         </Modal.Header>
         <Modal.Body>
             <form id={`${this.props.id}ModalForm`}>
-                <FormGroup controlId="formBasicText">
+                <FormGroup controlId={`${this.props.id}ModalTitleText`}>
                     <ControlLabel>Enter Story Title</ControlLabel>
                     <FormControl
                         type="text"
@@ -49,7 +49,7 @@ export default class CreateStoryModal extends React.Component {
                         onChange={this.handleChange}
                     />
                 </FormGroup>
-                <FormGroup controlId="formControlsTextArea">
+                <FormGroup controlId={`${this.props.id}ModalStoryBodyText`}>
                     <ControlLabel>Enter story text</ControlLabel>
                     <FormControl
                         componentClass="textarea"
@@ -57,7 +57,7 @@ export default class CreateStoryModal extends React.Component {
                         onChange={this.handleBodyChange}
                     />
                 </FormGroup>
-                <FormGroup controlId="formControlsSelect">
+                <FormGroup controlId={`${this.props.id}ModalSelectClassification`}>
                 <ControlLabel>Select A Classification</ControlLabel>
                 <FormControl componentClass="select" placeholder="select">
                     <option value="select">Top Stories</option>
@@ -65,7 +65,7 @@ export default class CreateStoryModal extends React.Component {
                     <option value="option1">Simulato Stories</option>
                 </FormControl>
                 </FormGroup>
-                <Button type="submit" onClick={this.createStory}>Submit</Button>
+                <Button type="submit" onClick={this.createStory} id={`${this.props.id}modalSubmitButton`}>Submit</Button>
             </form>
         </Modal.Body>
         <Modal.Footer>

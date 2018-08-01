@@ -24,7 +24,7 @@ class App extends Component {
             </Row> 
           </Col>
           <Col xs={10} md={10}>
-          <Tab.Container id="main-tab-contet">
+          <Tab.Container id="main-tab-content">
             <Row className="clearFix">
               <Col sm={12}>
                 <Nav bsStyle="tabs">
@@ -42,7 +42,7 @@ class App extends Component {
               </Col>
               <Col sm={12}>
                 <Tab.Content animation>
-                  <Tab.Pane eventKey={1}><Row className="App-body"></Row></Tab.Pane>
+                  <Tab.Pane eventKey={1}><Row className="App-body"><NewsArticleRows /></Row></Tab.Pane>
                   <Tab.Pane eventKey={2}><Row className="App-body"><NewsArticleRows /></Row></Tab.Pane>
                   <Tab.Pane eventKey={3}><Row className="App-body"><NewsArticleRows /></Row></Tab.Pane>
                   <Tab.Pane eventKey={4}><Row className="App-body"><NewsArticleRows /></Row></Tab.Pane>

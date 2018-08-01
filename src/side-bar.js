@@ -26,7 +26,7 @@ export default class SideBar extends React.Component {
     <div>
       <Navbar>
         <Nav>
-          <NavItem onClick={this.handleShow}>
+          <NavItem id= "createStoryButton" onClick={this.handleShow}>
                 Create Story
           </NavItem>
         </Nav>
