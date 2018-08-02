@@ -11,19 +11,19 @@ class App extends Component {
       <div>
         <Grid fluid>
           <Row className="App-header" id="siteHeader">
-              <Col xs={12} md={12}>
+            <Col xs={12} md={12}>
               <header>
-                  <h1 className="App-title">Welcome to USA Tomorrow</h1>
+                <h1 className="App-title">Welcome to USA Tomorrow</h1>
               </header>
-              </Col>
+            </Col>
           </Row>
           <Row>
             <MainContentView />
           </Row>
           <Row>
-                <Col xs={12} md={12}>
-                    <CreateStoryFooter /> 
-                </Col>
+            <Col sm={12}>
+              <CreateStoryFooter /> 
+            </Col>
           </Row>
         </Grid>
       </div>
