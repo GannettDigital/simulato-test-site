@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 import './App.css';
-import NewsArticleRows from './news-article-rows.js';
+import MainContentView from './main-content-view.js';
+import CreateStoryFooter from './create-story-footer.js';
 
 class App extends Component {
 
@@ -16,8 +17,13 @@ class App extends Component {
               </header>
             </Col>
           </Row>
-          <Row className="App-body">
-            <NewsArticleRows />
+          <Row>
+            <MainContentView />
+          </Row>
+          <Row>
+            <Col xs={12} md={12}>
+              <CreateStoryFooter /> 
+            </Col>
           </Row>
         </Grid>
       </div>
