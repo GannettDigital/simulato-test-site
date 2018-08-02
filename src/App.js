@@ -21,7 +21,7 @@ class App extends Component {
             <MainContentView />
           </Row>
           <Row>
-            <Col sm={12}>
+            <Col xs={12} md={12}>
               <CreateStoryFooter /> 
             </Col>
           </Row>
