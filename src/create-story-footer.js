@@ -26,7 +26,7 @@ export default class CreateStoryFooter extends React.Component {
     <div>
       <footer>
         <Navbar fixedBottom="true">
-          <Button bsStyle="primary" className="pull-right" id="createStoryButton" onClick={this.handleShow}>
+          <Button bsStyle="primary" className="footer-button" id="createStoryButton" onClick={this.handleShow}>
             Create Story
           </Button>
         </Navbar>

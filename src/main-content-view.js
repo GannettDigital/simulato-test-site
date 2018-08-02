@@ -10,7 +10,7 @@ export default class MainContentView extends React.Component {
                 <Col xs={12} md={12}>
                 <Tab.Container id="main-tab-content">
                     <Row className="clearFix">
-                    <Col sm={12}>
+                    <Col xs={12} md={12}>
                         <Nav bsStyle="tabs">
                         <NavItem eventKey={1}>Home</NavItem>
                         <NavItem eventKey={2}>Top Stories</NavItem>
@@ -24,12 +24,12 @@ export default class MainContentView extends React.Component {
                         </NavDropdown>
                         </Nav>
                     </Col>
-                    <Col sm={12}>
+                    <Col xs={12} md={12}>
                         <Tab.Content animation>
-                        <Tab.Pane eventKey={1}><Row className="App-body"><NewsArticleRows /></Row></Tab.Pane>
-                        <Tab.Pane eventKey={2}><Row className="App-body"><NewsArticleRows /></Row></Tab.Pane>
-                        <Tab.Pane eventKey={3}><Row className="App-body"><NewsArticleRows /></Row></Tab.Pane>
-                        <Tab.Pane eventKey={4}><Row className="App-body"><NewsArticleRows /></Row></Tab.Pane>
+                            <Tab.Pane eventKey={1}><Row className="App-body"><NewsArticleRows /></Row></Tab.Pane>
+                            <Tab.Pane eventKey={2}><Row className="App-body"><NewsArticleRows /></Row></Tab.Pane>
+                            <Tab.Pane eventKey={3}><Row className="App-body"><NewsArticleRows /></Row></Tab.Pane>
+                            <Tab.Pane eventKey={4}><Row className="App-body"><NewsArticleRows /></Row></Tab.Pane>
                         </Tab.Content>
                     </Col>
                     </Row>

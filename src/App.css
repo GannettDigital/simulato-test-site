@@ -27,6 +27,7 @@
 .container-fluid {
   height: 100%;
   padding-left: 10px;
+  padding-right: 10px;
 }
 
 .News-article-text {
@@ -34,4 +35,10 @@
   text-overflow: ellipsis;
   width: 100%;
   overflow: hidden;
+}
+
+.footer-button {
+  position: absolute;
+  right: 10px;
+  margin-top: 10px;
 }
