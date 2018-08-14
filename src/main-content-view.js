@@ -6,9 +6,9 @@ import NewsArticleRows from './news-article-rows.js';
 export default class MainContentView extends React.Component {
   render() {
     return (
-        <div>
+        <div style={{flex: 3}}>
                 <Col xs={12} md={12}>
-                <Tab.Container id="main-tab-content">
+                <Tab.Container id="mainTabContent">
                     <Row className="clearFix">
                     <Col xs={12} md={12}>
                         <Nav bsStyle="tabs">
@@ -16,20 +16,42 @@ export default class MainContentView extends React.Component {
                         <NavItem eventKey={2}>Top Stories</NavItem>
                         <NavItem eventKey={3}>Breaking Stories</NavItem>
                         <NavItem eventKey={4}>Simulato Stories</NavItem>
-                        <NavDropdown eventKey={5} title="Other News" id="nav-dropdown">
+                        <NavDropdown eventKey={5} title="Other News" id="navDropdown">
                             <MenuItem eventKey="4.1">Here</MenuItem>
                             <MenuItem eventKey="4.2">There</MenuItem>
                             <MenuItem eventKey="4.3">Anywhere</MenuItem>
                             <MenuItem eventKey="4.4">Green Eggs and Ham</MenuItem>
                         </NavDropdown>
                         </Nav>
-                    </Col>
-                    <Col xs={12} md={12}>
                         <Tab.Content animation>
-                            <Tab.Pane eventKey={1}><Row className="App-body"><NewsArticleRows /></Row></Tab.Pane>
-                            <Tab.Pane eventKey={2}><Row className="App-body"><NewsArticleRows /></Row></Tab.Pane>
-                            <Tab.Pane eventKey={3}><Row className="App-body"><NewsArticleRows /></Row></Tab.Pane>
-                            <Tab.Pane eventKey={4}><Row className="App-body"><NewsArticleRows /></Row></Tab.Pane>
+                            <Tab.Pane eventKey={1}>
+                                <Row className="App-body" id="tabSection1">
+                                    <Col xs={12} md={12}>
+                                        <NewsArticleRows id="tabSection1"/>
+                                    </Col>
+                                </Row>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey={2}>
+                                <Row className="App-body" id="tabSection2">
+                                    <Col xs={12} md={12}>
+                                        <NewsArticleRows id="tabSection2"/>
+                                    </Col>
+                                </Row>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey={3}>
+                                <Row className="App-body" id="tabSection3">
+                                    <Col xs={12} md={12}>
+                                        <NewsArticleRows id="tabSection3"/>
+                                    </Col>
+                                </Row>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey={4}>
+                                <Row className="App-body" id="tabSection4">
+                                    <Col xs={12} md={12}>
+                                        <NewsArticleRows id="tabSection4"/>
+                                    </Col>
+                                </Row>
+                            </Tab.Pane>
                         </Tab.Content>
                     </Col>
                     </Row>

@@ -58,14 +58,14 @@ export default class CreateStoryModal extends React.Component {
                     />
                 </FormGroup>
                 <FormGroup controlId={`${this.props.id}ModalSelectClassification`}>
-                <ControlLabel>Select A Classification</ControlLabel>
+                <ControlLabel id={`${this.props.id}ModalSelectClassification`}>Select A Classification</ControlLabel>
                 <FormControl componentClass="select" placeholder="select">
                     <option value="select">Top Stories</option>
                     <option value="option1">Breaking Stories</option>
                     <option value="option1">Simulato Stories</option>
                 </FormControl>
                 </FormGroup>
-                <Button type="submit" onClick={this.createStory} id={`${this.props.id}modalSubmitButton`}>Submit</Button>
+                <Button type="submit" onClick={this.createStory} id={`${this.props.id}ModalSubmitButton`}>Submit</Button>
             </form>
         </Modal.Body>
         <Modal.Footer>

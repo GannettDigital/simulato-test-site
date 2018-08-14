@@ -8,7 +8,7 @@ export default class NewsArticleRows extends React.Component {
     super(props);
     this.state = {
       articles: ArticleData.map((article, index) => 
-        <NewsArticle id={`article${index + 1}`} heading={article.heading} text={article.text} />
+        <NewsArticle id={`${this.props.id}Article${index + 1}`} heading={article.heading} text={article.text} />
       ),
       currentArticle: 0
     };
@@ -36,7 +36,7 @@ export default class NewsArticleRows extends React.Component {
       if (articleCols[i+1]) {
         col2 = articleCols[i+1]
       }
-      rows.push(<Row className="App-article-row">{col1}{col2}</Row>)
+      rows.push(<Row id={`ArticleRow${i}`} className="App-article-row">{col1}{col2}</Row>)
     }
     return rows;
   }
