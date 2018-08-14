@@ -1,3 +1,7 @@
+## 2.0.0
+
+Brian Fitzpatrick - Abstracted the main layout, added a button for create stories, added tabs for stories
+
 ## 1.0.1
 
 Scott Gunther - Add source code from closed source repo
