@@ -13,21 +13,26 @@ export default class CreateStoryModal extends React.Component {
         this.state = {
           titleValue: '',
           bodyValue: '',
+          categoryValue: '',
         };
     }
 
     handleTitleChange(e) {
-        this.setState({ value: e.target.titleValue });
+        this.setState({ titleValue: e.target.value });
     }
 
     handleBodyChange(e) {
-        this.setState({ value: e.target.bodyValue });
+        this.setState({ bodyValue: e.target.value });
+    }
+
+    handleCategoryChange(e) {
+        this.setState({ categoryValue: e.target.value });
     }
 
     createStory(event) {
         event.preventDefault();
-        alert(this.state.titleValue);
-        alert(this.state.bodyValue);
+        this.props.addArticle(this.state.titleValue, this.state.bodyValue, this.state.categoryValue)
+        alert(this.state.categoryValue);
         this.props.handleClose();
     }
 
@@ -44,14 +49,15 @@ export default class CreateStoryModal extends React.Component {
                     <ControlLabel>Enter Story Title</ControlLabel>
                     <FormControl
                         type="text"
-                        value={this.state.value}
+                        value={this.state.titleValue}
                         placeholder="Enter text"
-                        onChange={this.handleChange}
+                        onChange={this.handleTitleChange}
                     />
                 </FormGroup>
                 <FormGroup controlId={`${this.props.id}ModalStoryBodyText`}>
                     <ControlLabel>Enter story text</ControlLabel>
                     <FormControl
+                        value={this.state.bodyValue}
                         componentClass="textarea"
                         placeholder="Story Body"
                         onChange={this.handleBodyChange}
@@ -59,7 +65,12 @@ export default class CreateStoryModal extends React.Component {
                 </FormGroup>
                 <FormGroup controlId={`${this.props.id}ModalSelectClassification`}>
                 <ControlLabel id={`${this.props.id}ModalSelectClassification`}>Select A Classification</ControlLabel>
-                <FormControl componentClass="select" placeholder="select">
+                <FormControl
+                    componentClass="select"
+                    placeholder="select"
+                    value={this.state.categoryValue}
+                    onChange={this.handleCategoryChange}
+                > 
                     <option value="select">Top Stories</option>
                     <option value="option1">Breaking Stories</option>
                     <option value="option1">Simulato Stories</option>

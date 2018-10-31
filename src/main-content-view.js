@@ -4,6 +4,7 @@ import {Nav, NavItem, Row, Col,
 import NewsArticleRows from './news-article-rows.js';
 
 export default class MainContentView extends React.Component {
+
   render() {
     return (
         <div style={{flex: 3}}>
@@ -27,28 +28,28 @@ export default class MainContentView extends React.Component {
                             <Tab.Pane eventKey={1}>
                                 <Row className="App-body" id="tabSection1">
                                     <Col xs={12} md={12}>
-                                        <NewsArticleRows id="tabSection1"/>
+                                        <NewsArticleRows id="tabSection1" articles={this.props.articles} />
                                     </Col>
                                 </Row>
                             </Tab.Pane>
                             <Tab.Pane eventKey={2}>
                                 <Row className="App-body" id="tabSection2">
                                     <Col xs={12} md={12}>
-                                        <NewsArticleRows id="tabSection2"/>
+                                        <NewsArticleRows id="tabSection2" articles={this.props.articles} />
                                     </Col>
                                 </Row>
                             </Tab.Pane>
                             <Tab.Pane eventKey={3}>
                                 <Row className="App-body" id="tabSection3">
                                     <Col xs={12} md={12}>
-                                        <NewsArticleRows id="tabSection3"/>
+                                        <NewsArticleRows id="tabSection3" articles={this.props.articles} />
                                     </Col>
                                 </Row>
                             </Tab.Pane>
                             <Tab.Pane eventKey={4}>
                                 <Row className="App-body" id="tabSection4">
                                     <Col xs={12} md={12}>
-                                        <NewsArticleRows id="tabSection4"/>
+                                        <NewsArticleRows id="tabSection4" articles={this.props.articles} />
                                     </Col>
                                 </Row>
                             </Tab.Pane>
