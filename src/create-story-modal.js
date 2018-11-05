@@ -8,6 +8,7 @@ export default class CreateStoryModal extends React.Component {
     
         this.handleTitleChange = this.handleTitleChange.bind(this);
         this.handleBodyChange = this.handleBodyChange.bind(this);
+        this.handleCategoryChange = this.handleCategoryChange.bind(this);
         this.createStory = this.createStory.bind(this);
     
         this.state = {
@@ -70,10 +71,10 @@ export default class CreateStoryModal extends React.Component {
                     placeholder="select"
                     value={this.state.categoryValue}
                     onChange={this.handleCategoryChange}
-                > 
-                    <option value="select">Top Stories</option>
-                    <option value="option1">Breaking Stories</option>
-                    <option value="option1">Simulato Stories</option>
+                >
+                    <option value="topStories">Top Stories</option>
+                    <option value="breakingStories">Breaking Stories</option>
+                    <option value="simulatoStories">Simulato Stories</option>
                 </FormControl>
                 </FormGroup>
                 <Button type="submit" onClick={this.createStory} id={`${this.props.id}ModalSubmitButton`}>Submit</Button>

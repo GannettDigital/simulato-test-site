@@ -26,30 +26,30 @@ export default class MainContentView extends React.Component {
                         </Nav>
                         <Tab.Content animation>
                             <Tab.Pane eventKey={1}>
-                                <Row className="App-body" id="tabSection1">
+                                <Row className="App-body" id="home">
                                     <Col xs={12} md={12}>
-                                        <NewsArticleRows id="tabSection1" articles={this.props.articles} />
+                                        <NewsArticleRows id="home" articles={this.props.articles} />
                                     </Col>
                                 </Row>
                             </Tab.Pane>
                             <Tab.Pane eventKey={2}>
-                                <Row className="App-body" id="tabSection2">
+                                <Row className="App-body" id="topStories">
                                     <Col xs={12} md={12}>
-                                        <NewsArticleRows id="tabSection2" articles={this.props.articles} />
+                                        <NewsArticleRows id="topStories" articles={this.props.articles} />
                                     </Col>
                                 </Row>
                             </Tab.Pane>
                             <Tab.Pane eventKey={3}>
-                                <Row className="App-body" id="tabSection3">
+                                <Row className="App-body" id="breakingStories">
                                     <Col xs={12} md={12}>
-                                        <NewsArticleRows id="tabSection3" articles={this.props.articles} />
+                                        <NewsArticleRows id="breakingStories" articles={this.props.articles} />
                                     </Col>
                                 </Row>
                             </Tab.Pane>
                             <Tab.Pane eventKey={4}>
-                                <Row className="App-body" id="tabSection4">
+                                <Row className="App-body" id="simulatoStories">
                                     <Col xs={12} md={12}>
-                                        <NewsArticleRows id="tabSection4" articles={this.props.articles} />
+                                        <NewsArticleRows id="simulatoStories" articles={this.props.articles} />
                                     </Col>
                                 </Row>
                             </Tab.Pane>
