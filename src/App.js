@@ -12,7 +12,7 @@ class App extends Component {
     super(props);
     this.state = {
       articles: ArticleData.map((article, index) => 
-      <NewsArticle id={`${this.props.id}Article${index + 1}`} heading={article.heading} text={article.text} />
+      <NewsArticle id={`${this.props.id}Article${index + 1}`} heading={article.heading} text={article.text} category={article.category} />
     )
     };
   };

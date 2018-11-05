@@ -32,8 +32,10 @@ export default class CreateStoryModal extends React.Component {
 
     createStory(event) {
         event.preventDefault();
-        this.props.addArticle(this.state.titleValue, this.state.bodyValue, this.state.categoryValue)
-        alert(this.state.categoryValue);
+        this.props.addArticle(this.state.titleValue, this.state.bodyValue, this.state.categoryValue);
+        this.state.titleValue = '';
+        this.state.bodyValue = '';
+        this.state.categoryValue = '';
         this.props.handleClose();
     }
 

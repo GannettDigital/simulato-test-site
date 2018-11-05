@@ -18,7 +18,10 @@ export default class NewsArticleRows extends React.Component {
     let currentArticle = this.state.currentArticle;
     let articlesLength = this.state.articles.length;
     while(currentArticle < articlesLength) {
-      articleCols.push(this.createArticleCol(currentArticle))
+      var article = this.state.articles[currentArticle];
+      if(this.props.id == "home" || article.props.category == this.props.id) {
+        articleCols.push(this.createArticleCol(currentArticle))
+      }
       currentArticle++;
     }
     return this.createArticleRows(articleCols);
