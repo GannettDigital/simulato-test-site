@@ -2,11 +2,13 @@ import React from 'react';
 import {Nav, NavItem, Row, Col,
         Tab, MenuItem, NavDropdown} from 'react-bootstrap';
 import NewsArticleRows from './news-article-rows.js';
+import BreakingNewsHeader from './breaking-news-header.js';
 
 export default class MainContentView extends React.Component {
   render() {
     return (
         <div style={{flex: 3}}>
+                <BreakingNewsHeader />
                 <Col xs={12} md={12}>
                 <Tab.Container id="mainTabContent">
                     <Row className="clearFix">
