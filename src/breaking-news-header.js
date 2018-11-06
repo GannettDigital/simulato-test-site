@@ -15,14 +15,24 @@ export default class BreakingNewsHeader extends React.Component {
         return; // TODO
     }
 
-  render() {
-    return (
-        <Navbar>
-            <Navbar.Brand>Breaking News</Navbar.Brand>
-            <Navbar.Text>
-                Breaking News Item will go here. <a onSelect={this.openBreakingNews()}>Read More</a>
-            </Navbar.Text>
-        </Navbar>
-    );
-  }
+    render() {
+        var breakingNews = { // hardcoded until we can get categories working TODO
+            heading: "Wow breaking news item",
+            text: "Breaking news information is here",
+            category: "breakingNews"
+        }
+        if(breakingNews.category === "breakingNews") {
+            return (
+                <Navbar>
+                    <Navbar.Brand>Breaking News</Navbar.Brand>
+                    <Navbar.Text>
+                        {breakingNews.heading} <a onSelect={this.openBreakingNews(breakingNews)}>Read More</a>
+                    </Navbar.Text>
+                </Navbar>
+            );
+        } else {
+            return null;
+        }
+        
+    }
 }
