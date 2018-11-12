@@ -19,7 +19,6 @@ export default class BreakingNewsHeader extends React.Component {
             show: false
         };
         if(breaking.length > 0) {
-            console.log("OKOK");
             this.setState({
                 item: breaking[Math.floor(Math.random() * breaking.length)]
             });
@@ -29,9 +28,7 @@ export default class BreakingNewsHeader extends React.Component {
         this.handleClose = this.handleClose.bind(this);
     }
 
-    openBreakingNews() {
-        console.log("ok");
-        
+    openBreakingNews() {        
         this.setState({
             show: true
         });
@@ -49,7 +46,6 @@ export default class BreakingNewsHeader extends React.Component {
 
     render() {
         if(this.state.breakingNews.length > 0) {
-            var x = this.state;
             return (
                 <div>
                 <Navbar>
