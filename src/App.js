@@ -5,6 +5,7 @@ import MainContentView from './main-content-view.js';
 import CreateStoryFooter from './create-story-footer.js';
 import NewsArticle from './news-article.js';
 import ArticleData from './article-data.json'
+import BreakingNewsHeader from './breaking-news-header';
 
 class App extends Component {
 
@@ -36,6 +37,9 @@ class App extends Component {
                 <h1 className="App-title">Welcome to USA Tomorrow</h1>
               </header>
             </Col>
+          </Row>
+          <Row>
+            <BreakingNewsHeader articles={this.state.articles} />
           </Row>
           <Row>
             <MainContentView articles={this.state.articles} />
