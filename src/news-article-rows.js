@@ -1,15 +1,11 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import NewsArticle from './news-article.js';
-import ArticleData from './article-data.json';
 
 export default class NewsArticleRows extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      articles: ArticleData.map((article, index) => 
-        <NewsArticle id={`${this.props.id}Article${index + 1}`} heading={article.heading} text={article.text} />
-      ),
+      articles: this.props.articles,
       currentArticle: 0
     };
     this.createArticles = this.createArticles.bind(this);
@@ -22,7 +18,10 @@ export default class NewsArticleRows extends React.Component {
     let currentArticle = this.state.currentArticle;
     let articlesLength = this.state.articles.length;
     while(currentArticle < articlesLength) {
-      articleCols.push(this.createArticleCol(currentArticle))
+      var article = this.state.articles[currentArticle];
+      if(this.props.id === "home" || article.props.category === this.props.id) {
+        articleCols.push(this.createArticleCol(currentArticle))
+      }
       currentArticle++;
     }
     return this.createArticleRows(articleCols);
