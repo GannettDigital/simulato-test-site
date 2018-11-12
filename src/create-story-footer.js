@@ -35,6 +35,7 @@ export default class CreateStoryFooter extends React.Component {
         handleClose={this.handleClose}
         show={this.state.showStoryModal}
         id="createStory"
+        addArticle={this.props.addArticle}
       >
       </CreateStoryModal>
     </div>

@@ -4,6 +4,10 @@ import ViewStoryModal from './view-story-modal.js';
 
 // Below svg has the following license: https://fontawesome.com/license
 
+// Properties:
+// heading
+// text
+// id
 export default class NewsArticle extends React.Component {
   constructor(props) {
     super(props);
