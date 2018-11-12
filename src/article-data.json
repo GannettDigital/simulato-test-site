@@ -6,6 +6,14 @@
   },{
     "heading": "Test Article Two",
     "text": "This is the body text of a second test article that is long enough to pass by the preview and still show more in the pop up modal.",
-    "category": "topStories"
+    "category": "breakingStories"
+  },{
+    "heading": "Test Article Three",
+    "text": "This is the body text of a third test article that is long enough to pass by the preview and still show more in the pop up modal.",
+    "category": "breakingStories"
+  },{
+    "heading": "Test Article Four",
+    "text": "This is the body text of a fourth test article that is long enough to pass by the preview and still show more in the pop up modal.",
+    "category": "breakingStories"
   }
 ]
