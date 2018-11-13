@@ -42,7 +42,7 @@ class App extends Component {
             <BreakingNewsHeader articles={this.state.articles} />
           </Row>
           <Row>
-            <MainContentView articles={this.state.articles} />
+            <MainContentView articles={this.state.articles} setActive={this.props.setActive} />
           </Row>
           <Row>
             <Col xs={12} md={12}>

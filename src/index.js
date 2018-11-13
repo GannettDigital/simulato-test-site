@@ -10,8 +10,8 @@ const rootDiv = document.getElementById('root');
 const secondDiv = document.getElementById('second-root');
 
 if(rootDiv) {
-    ReactDOM.render(<App />, document.getElementById('root'));
+    ReactDOM.render(<App setActive={1} />, document.getElementById('root'));
 } else if(secondDiv) {
-    ReactDOM.render(<h3>Second Root!</h3>, document.getElementById('second-root'));
+    ReactDOM.render(<App setActive={2} />, document.getElementById('second-root'));
 }
 registerServiceWorker();
