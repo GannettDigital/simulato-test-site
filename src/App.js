@@ -13,18 +13,47 @@ class App extends Component {
     super(props);
     this.state = {
       articles: ArticleData.map((article, index) => 
-      <NewsArticle id={`${this.props.id}Article${index + 1}`} heading={article.heading} text={article.text} category={article.category} />
+      <NewsArticle key={`${this.props.id}Article${index + 1}`} heading={article.heading} text={article.text} category={article.category} />
     )
     };
+
+    this.addAtricle = this.addAtricle.bind(this);
+    this.refreshArticles = this.refreshArticles.bind(this);
   };
 
   addAtricle(heading, text, category) {
     let newArticles = this.state.articles;
     newArticles.push(
-      <NewsArticle id={`${this.props.id}Article${newArticles.length}`} heading={heading} text={text} category={category} />
+      <NewsArticle key={`${this.props.id}Article${newArticles.length}`} heading={heading} text={text} category={category} />
     )
 
     this.setState({articles: newArticles});
+  }
+
+  refreshArticles() {
+    // Shuffle function from: https://stackoverflow.com/questions/962802/
+    function shuffle(array) {
+      var tmp, current, top = array.length;
+  
+      if(top) while(--top) {
+          current = Math.floor(Math.random() * (top + 1));
+          tmp = array[current];
+          array[current] = array[top];
+          array[top] = tmp;
+      }
+  
+      return array;
+    }
+
+    var chosen = shuffle(this.state.articles);
+    if(chosen.length > 5) {
+      chosen = chosen.slice(0, 5);
+    }
+
+    this.setState({
+      chosen: chosen
+    });
+
   }
 
   render() {

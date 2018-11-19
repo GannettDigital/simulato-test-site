@@ -30,28 +30,28 @@ export default class MainContentView extends React.Component {
                             <Tab.Pane eventKey={1}>
                                 <Row className="App-body" id="home">
                                     <Col xs={12} md={12}>
-                                        <NewsArticleRows id="home" articles={this.props.articles} />
+                                        <NewsArticleRows key="home" tab="home" articles={this.props.articles} />
                                     </Col>
                                 </Row>
                             </Tab.Pane>
                             <Tab.Pane eventKey={2}>
                                 <Row className="App-body" id="topStories">
                                     <Col xs={12} md={12}>
-                                        <NewsArticleRows id="topStories" articles={this.props.articles} />
+                                        <NewsArticleRows key="topStories" tab="topStories" articles={this.props.articles} />
                                     </Col>
                                 </Row>
                             </Tab.Pane>
                             <Tab.Pane eventKey={3}>
                                 <Row className="App-body" id="breakingStories">
                                     <Col xs={12} md={12}>
-                                        <NewsArticleRows id="breakingStories" articles={this.props.articles} />
+                                        <NewsArticleRows key="breakingStories" tab="breakingStories" articles={this.props.articles} />
                                     </Col>
                                 </Row>
                             </Tab.Pane>
                             <Tab.Pane eventKey={4}>
                                 <Row className="App-body" id="simulatoStories">
                                     <Col xs={12} md={12}>
-                                        <NewsArticleRows id="simulatoStories" articles={this.props.articles} />
+                                        <NewsArticleRows key="simulatoStories" tab="simulatoStories" articles={this.props.articles} />
                                     </Col>
                                 </Row>
                             </Tab.Pane>

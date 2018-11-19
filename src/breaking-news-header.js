@@ -18,11 +18,6 @@ export default class BreakingNewsHeader extends React.Component {
             item: breaking[Math.floor(Math.random() * breaking.length)],
             show: false
         };
-        if(breaking.length > 0) {
-            this.setState({
-                item: breaking[Math.floor(Math.random() * breaking.length)]
-            });
-        }
 
         this.openBreakingNews = this.openBreakingNews.bind(this);
         this.handleClose = this.handleClose.bind(this);

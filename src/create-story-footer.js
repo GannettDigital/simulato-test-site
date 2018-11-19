@@ -25,9 +25,12 @@ export default class CreateStoryFooter extends React.Component {
     return (
     <div>
       <footer>
-        <Navbar fixedBottom="true">
+        <Navbar fixedBottom={true}>
           <Button bsStyle="primary" className="footer-button" id="createStoryButton" onClick={this.handleShow}>
             Create Story
+          </Button>
+          <Button bsStyle="primary" className="footer-button" id="refreshStoriesButton" onClick={this.handleShow}>
+            Refresh
           </Button>
         </Navbar>
       </footer>
