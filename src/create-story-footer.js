@@ -29,7 +29,7 @@ export default class CreateStoryFooter extends React.Component {
           <Button bsStyle="primary" className="footer-button" id="createStoryButton" onClick={this.handleShow}>
             Create Story
           </Button>
-          <Button bsStyle="primary" className="footer-button" id="refreshStoriesButton" onClick={this.handleShow}>
+          <Button bsStyle="primary" className="footer-button" id="refreshStoriesButton" onClick={this.props.refreshArticles}>
             Refresh
           </Button>
         </Navbar>
