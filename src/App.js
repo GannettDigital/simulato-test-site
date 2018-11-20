@@ -67,8 +67,6 @@ class App extends Component {
           chosen: portion
         };
     });
-
-    //this.render();
   }
 
   componentDidMount() {
