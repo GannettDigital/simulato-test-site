@@ -15,16 +15,16 @@ export default class MainContentView extends React.Component {
                     <Row className="clearFix">
                     <Col xs={12} md={12}>
                         <Nav bsStyle="tabs">
-                        <NavItem eventKey={1}>Home</NavItem>
-                        <NavItem eventKey={2}>Top Stories</NavItem>
-                        <NavItem eventKey={3}>Breaking Stories</NavItem>
-                        <NavItem eventKey={4}>Simulato Stories</NavItem>
-                        <NavDropdown eventKey={5} title="Other News" id="navDropdown">
-                            <MenuItem eventKey="4.1">Here</MenuItem>
-                            <MenuItem eventKey="4.2">There</MenuItem>
-                            <MenuItem eventKey="4.3">Anywhere</MenuItem>
-                            <MenuItem eventKey="4.4">Green Eggs and Ham</MenuItem>
-                        </NavDropdown>
+                            <NavItem eventKey={1}>Home</NavItem>
+                            <NavItem eventKey={2}>Top Stories</NavItem>
+                            <NavItem eventKey={3}>Breaking Stories</NavItem>
+                            <NavItem eventKey={4}>Simulato Stories</NavItem>
+                            <NavDropdown eventKey={5} title="Other News" id="navDropdown">
+                                <MenuItem eventKey="4.1">Here</MenuItem>
+                                <MenuItem eventKey="4.2">There</MenuItem>
+                                <MenuItem eventKey="4.3">Anywhere</MenuItem>
+                                <MenuItem eventKey="4.4">Green Eggs and Ham</MenuItem>
+                            </NavDropdown>
                         </Nav>
                         <Tab.Content animation>
                             <Tab.Pane eventKey={1}>

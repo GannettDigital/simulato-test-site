@@ -14,7 +14,8 @@ class App extends Component {
     this.state = {
       chosen: [],
       articles: ArticleData.map((article, index) => 
-      <NewsArticle key={`Article${index + 1}`} heading={article.heading} text={article.text} category={article.category} />)
+      <NewsArticle key={`Article${index + 1}`} heading={article.heading} text={article.text} category={article.category} />),
+      updated: new Date()
     };
 
     this.addAtricle = this.addAtricle.bind(this);
@@ -30,7 +31,8 @@ class App extends Component {
       )
       
       return {
-        articles: newArticles
+        articles: newArticles,
+        updated: new Date()
       };
     });
 
@@ -64,9 +66,11 @@ class App extends Component {
           portion = portion.slice(0, 5);
         }
         return {
-          chosen: portion
+          chosen: portion,
+          updated: new Date()
         };
     });
+
   }
 
   componentDidMount() {
@@ -85,10 +89,10 @@ class App extends Component {
             </Col>
           </Row>
           <Row>
-            <BreakingNewsHeader articles={this.state.chosen} />
+            <BreakingNewsHeader key={"header" + this.state.updated} articles={this.state.chosen} />
           </Row>
           <Row>
-            <MainContentView articles={this.state.chosen} />
+            <MainContentView key={"articles" + this.state.updated} articles={this.state.chosen} />
           </Row>
           <Row>
             <Col xs={12} md={12}>
