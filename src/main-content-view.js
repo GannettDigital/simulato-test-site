@@ -5,13 +5,33 @@ import NewsArticleRows from './news-article-rows.js';
 import BreakingNewsHeader from './breaking-news-header.js';
 
 export default class MainContentView extends React.Component {
+    constructor(props) {
+        super(props);
+
+        var setActive = 1;
+        if(props.setActive) {
+            setActive = props.setActive;
+        };
+        this.state = {
+            activeTab: setActive
+        };
+
+        this.updateTab = this.updateTab.bind(this);
+    }
+
+    updateTab(key) {
+        this.setState({
+            activeTab: key
+        });
+    }
+
 
   render() {
     return (
         <div style={{flex: 3}}>
                 <BreakingNewsHeader />
                 <Col xs={12} md={12}>
-                <Tab.Container id="mainTabContent">
+                <Tab.Container activeKey={this.state.activeTab} onSelect={this.updateTab} id="mainTabContent">
                     <Row className="clearFix">
                     <Col xs={12} md={12}>
                         <Nav bsStyle="tabs">

@@ -92,7 +92,7 @@ class App extends Component {
             <BreakingNewsHeader key={"header" + this.state.updated} articles={this.state.chosen} />
           </Row>
           <Row>
-            <MainContentView key={"articles" + this.state.updated} articles={this.state.chosen} />
+            <MainContentView key={"articles" + this.state.updated} articles={this.state.chosen} setActive={this.props.setActive} />
           </Row>
           <Row>
             <Col xs={12} md={12}>

@@ -9,7 +9,7 @@ export default class BreakingNewsHeader extends React.Component {
         var breaking = [];
         for(var i in this.props.articles) {
             if(this.props.articles[i].props.category === "breakingStories") {
-                breaking.push(this.props.articles[i]);
+                breaking.push(i);
             }
         }
         
@@ -23,7 +23,7 @@ export default class BreakingNewsHeader extends React.Component {
         this.handleClose = this.handleClose.bind(this);
     }
 
-    openBreakingNews() {        
+    openBreakingNews() {
         this.setState({
             show: true
         });
@@ -46,15 +46,15 @@ export default class BreakingNewsHeader extends React.Component {
                 <Navbar>
                     <Navbar.Brand>Breaking News</Navbar.Brand>
                     <Navbar.Text>
-                        {this.state.item.props.heading} | <a href="#article" onClick={this.openBreakingNews}>Read More</a>
+                        {this.props.articles[this.state.item].props.heading} | <a href="#article" onClick={this.openBreakingNews}>Read More</a>
                     </Navbar.Text>
                 </Navbar>
                 <ViewStoryModal 
-                    text={this.state.item.props.text}
-                    heading={this.state.item.props.heading}
+                    text={this.props.articles[this.state.item].props.text}
+                    heading={this.props.articles[this.state.item].props.heading}
                     handleClose={this.handleClose}
                     show={this.state.show}
-                    id={this.state.item.props.id}
+                    id={this.props.articles[this.state.item].props.id}
                 />
               </div>
             );

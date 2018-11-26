@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Navbar } from 'react-bootstrap';
+import {Button, Navbar, Nav } from 'react-bootstrap';
 import CreateStoryModal from './create-story-modal.js';
 
 export default class CreateStoryFooter extends React.Component {
@@ -26,12 +26,14 @@ export default class CreateStoryFooter extends React.Component {
     <div>
       <footer>
         <Navbar fixedBottom={true}>
-          <Button bsStyle="primary" className="footer-button" id="createStoryButton" onClick={this.handleShow}>
-            Create Story
-          </Button>
-          <Button bsStyle="primary" className="footer-button" id="refreshStoriesButton" onClick={this.props.refreshArticles}>
-            Refresh
-          </Button>
+          <Nav pullRight>
+            <Button bsStyle="primary" className="footer-button" id="createStoryButton" onClick={this.handleShow}>
+              Create Story
+            </Button>
+            <Button bsStyle="primary" className="footer-button" id="refreshStoriesButton" onClick={this.props.refreshArticles}>
+              Refresh
+            </Button>
+          </Nav>
         </Navbar>
       </footer>
       <CreateStoryModal
