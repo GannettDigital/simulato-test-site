@@ -28,8 +28,7 @@ export default class BreakingNewsHeader extends React.Component {
             show: true
         });
         
-        
-        return; // TODO
+        return;
     }
 
     handleClose() {

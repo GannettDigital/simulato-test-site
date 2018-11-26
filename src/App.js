@@ -15,7 +15,7 @@ class App extends Component {
       chosen: [],
       articles: ArticleData.map((article, index) => 
       <NewsArticle key={`Article${index + 1}`} heading={article.heading} text={article.text} category={article.category} />),
-      updated: new Date()
+      updated: 1
     };
 
     this.addAtricle = this.addAtricle.bind(this);
@@ -32,7 +32,7 @@ class App extends Component {
       
       return {
         articles: newArticles,
-        updated: new Date()
+        updated: state.updated + 1
       };
     });
 
@@ -67,7 +67,7 @@ class App extends Component {
         }
         return {
           chosen: portion,
-          updated: new Date()
+          updated: state.updated + 1
         };
     });
 
