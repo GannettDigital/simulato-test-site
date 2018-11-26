@@ -46,7 +46,7 @@ class App extends Component {
           </Row>
           <Row>
             <Col xs={12} md={12}>
-              <CreateStoryFooter article={this.state.articles} addArticle={this.addAtricle.bind(this)} /> 
+              <CreateStoryFooter articles={this.state.articles} addArticle={this.addAtricle.bind(this)} /> 
             </Col>
           </Row>
         </Grid>

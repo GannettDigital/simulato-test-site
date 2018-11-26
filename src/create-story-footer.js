@@ -26,6 +26,9 @@ export default class CreateStoryFooter extends React.Component {
     <div>
       <footer>
         <Navbar fixedBottom="true">
+          <Navbar.Text>
+            Total Articles: {this.props.articles.length}
+          </Navbar.Text>
           <Button bsStyle="primary" className="footer-button" id="createStoryButton" onClick={this.handleShow}>
             Create Story
           </Button>
