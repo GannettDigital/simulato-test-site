@@ -5,7 +5,6 @@ export default class NewsArticleRows extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      articles: this.props.articles,
       currentArticle: 0
     };
     this.createArticles = this.createArticles.bind(this);
@@ -16,10 +15,10 @@ export default class NewsArticleRows extends React.Component {
   createArticles() {    
     let articleCols = [];
     let currentArticle = this.state.currentArticle;
-    let articlesLength = this.state.articles.length;
+    let articlesLength = this.props.articles.length;
     while(currentArticle < articlesLength) {
-      var article = this.state.articles[currentArticle];
-      if(this.props.id === "home" || article.props.category === this.props.id) {
+      var article = this.props.articles[currentArticle];
+      if(this.props.tab === "home" || article.props.category === this.props.tab) {
         articleCols.push(this.createArticleCol(currentArticle))
       }
       currentArticle++;
@@ -41,10 +40,10 @@ export default class NewsArticleRows extends React.Component {
   }
 
   createArticleCol(currentArticle) {
-    if (this.state.articles[currentArticle]) {
+    if (this.props.articles[currentArticle]) {
       return (
         <Col xs={6} md={6}>
-          {this.state.articles[currentArticle]}
+          {this.props.articles[currentArticle]}
         </Col>
       );
     }
