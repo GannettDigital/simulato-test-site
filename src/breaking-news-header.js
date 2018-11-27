@@ -13,9 +13,15 @@ export default class BreakingNewsHeader extends React.Component {
             }
         }
         
+        var item = breaking[Math.floor(Math.random() * breaking.length)];
+        var element;
+        if(this.props.articles) {
+            element = this.props.articles[item];
+        }
         this.state = {
             breakingNews: breaking,
-            item: breaking[Math.floor(Math.random() * breaking.length)],
+            item: item,
+            element: element,
             show: false
         };
 
@@ -32,10 +38,36 @@ export default class BreakingNewsHeader extends React.Component {
     }
 
     handleClose() {
-        this.setState({
-            item: this.state.breakingNews[Math.floor(Math.random() * this.state.breakingNews.length)],
-            show: false
+        this.setState(function(props, state) {
+            var item;
+            if(state.breakingNews) {
+                item = state.breakingNews[Math.floor(Math.random() * state.breakingNews.length)];
+            }
+            var element;
+            if(props.articles) {
+                element = props.articles[item]
+            }
+
+            return {
+                item: item,
+                element: element,
+                show: false
+            }
         });
+    }
+
+    /*
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        return prevProps.articles[prevState.item]
+    }
+    */
+
+    shouldComponentUpdate(nextProps, nextState) {
+        if(nextProps.updateBreaking || this.state.show !== nextState.show) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     render() {
@@ -49,11 +81,11 @@ export default class BreakingNewsHeader extends React.Component {
                     </Navbar.Text>
                 </Navbar>
                 <ViewStoryModal 
-                    text={this.props.articles[this.state.item].props.text}
-                    heading={this.props.articles[this.state.item].props.heading}
+                    text={this.state.element.props.text}
+                    heading={this.state.element.props.heading}
                     handleClose={this.handleClose}
                     show={this.state.show}
-                    id={this.props.articles[this.state.item].props.id}
+                    id={this.state.element.props.id}
                 />
               </div>
             );

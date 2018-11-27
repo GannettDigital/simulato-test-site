@@ -15,11 +15,14 @@ class App extends Component {
       chosen: [],
       articles: ArticleData.map((article, index) => 
       <NewsArticle key={`Article${index + 1}`} heading={article.heading} text={article.text} category={article.category} />),
-      updated: 1
+      updated: 1,
+      updatedBreaking: 1,
+      updateBreaking: true
     };
 
     this.addAtricle = this.addAtricle.bind(this);
     this.refreshArticles = this.refreshArticles.bind(this);
+    this.toggleBreakingRefresh = this.toggleBreakingRefresh.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
   };
 
@@ -37,6 +40,14 @@ class App extends Component {
     });
 
     this.refreshArticles();
+  }
+
+  toggleBreakingRefresh() {
+    this.setState(function(state, props) {
+      return {
+        updateBreaking: !state.updateBreaking
+      }
+    });
   }
 
   refreshArticles() {
@@ -65,9 +76,16 @@ class App extends Component {
         if(portion.length > 5) {
           portion = portion.slice(0, 5);
         }
+
+        var updatedForBreaking = state.updatedBreaking;
+        if(state.updateBreaking) {
+          updatedForBreaking += 1;
+        }
+
         return {
           chosen: portion,
-          updated: state.updated + 1
+          updated: state.updated + 1,
+          updatedBreaking: updatedForBreaking
         };
     });
 
@@ -89,14 +107,14 @@ class App extends Component {
             </Col>
           </Row>
           <Row>
-            <BreakingNewsHeader key={"header" + this.state.updated} articles={this.state.chosen} />
+            <BreakingNewsHeader key={"header" + this.state.updatedBreaking} updateBreaking={this.state.updateBreaking} articles={this.state.chosen} />
           </Row>
           <Row>
             <MainContentView articles={this.state.chosen} setActive={this.props.setActive} />
           </Row>
           <Row>
             <Col xs={12} md={12}>
-              <CreateStoryFooter articles={this.state.articles} refreshArticles={this.refreshArticles.bind(this)} addArticle={this.addAtricle.bind(this)} /> 
+              <CreateStoryFooter articles={this.state.articles} refreshArticles={this.refreshArticles.bind(this)} addArticle={this.addAtricle.bind(this)} toggleBreakingRefresh={this.toggleBreakingRefresh.bind(this)} updateBreaking={this.state.updateBreaking} /> 
             </Col>
           </Row>
         </Grid>
