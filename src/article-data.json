@@ -15,5 +15,26 @@
     "heading": "Test Article Four",
     "text": "This is the body text of a fourth test article that is long enough to pass by the preview and still show more in the pop up modal.",
     "category": "breakingStories"
+  },
+  {
+    "heading": "Test Article Five",
+    "text": "This is the body text of a fifth test article that is long enough to pass by the preview and still show more in the pop up modal.",
+    "category": "topStories"
+  },{
+    "heading": "Test Article Six",
+    "text": "This is the body text of a sixth test article that is long enough to pass by the preview and still show more in the pop up modal.",
+    "category": "simulatoStories"
+  },{
+    "heading": "Test Article Seven",
+    "text": "This is the body text of a seventh test article that is long enough to pass by the preview and still show more in the pop up modal.",
+    "category": "simulatoStories"
+  },{
+    "heading": "Test Article Eight",
+    "text": "This is the body text of a eighth test article that is long enough to pass by the preview and still show more in the pop up modal.",
+    "category": "topStories"
+  },{
+    "heading": "Test Article Nine",
+    "text": "This is the body text of a ninth test article that is long enough to pass by the preview and still show more in the pop up modal.",
+    "category": "simulatoStories"
   }
 ]
