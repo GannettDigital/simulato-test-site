@@ -96,7 +96,7 @@ class App extends Component {
           </Row>
           <Row>
             <Col xs={12} md={12}>
-              <CreateStoryFooter article={this.state.chosen} refreshArticles={this.refreshArticles.bind(this)} addArticle={this.addAtricle.bind(this)} /> 
+              <CreateStoryFooter articles={this.state.articles} refreshArticles={this.refreshArticles.bind(this)} addArticle={this.addAtricle.bind(this)} /> 
             </Col>
           </Row>
         </Grid>
