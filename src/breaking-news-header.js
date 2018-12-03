@@ -40,16 +40,25 @@ export default class BreakingNewsHeader extends React.Component {
     handleClose() {
         this.setState(function(state, props) {
             if(props.updateBreaking) {
+                var breaking = [];
+                for(var i in this.props.articles) {
+                    if(this.props.articles[i].props.category === "breakingStories") {
+                        breaking.push(i);
+                    }
+                }
                 var item;
-                if(state.breakingNews) {
-                    item = state.breakingNews[Math.floor(Math.random() * state.breakingNews.length)];
-                }
                 var element;
-                if(props.articles) {
-                    element = props.articles[item]
+                if(breaking.length > 0) {
+                    item = state.breakingNews[Math.floor(Math.random() * state.breakingNews.length)];
+
+                    if(props.articles) {
+                        element = props.articles[item]
+                    }
                 }
-    
+
+
                 return {
+                    breakingNews: breaking,
                     item: item,
                     element: element,
                     show: false
