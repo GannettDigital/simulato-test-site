@@ -33,8 +33,11 @@ export default class CreateStoryFooter extends React.Component {
             <Button bsStyle="primary" className="footer-button" id="createStoryButton" onClick={this.handleShow}>
               Create Story
             </Button>
-            <Button bsStyle="primary" className="footer-button" id="refreshStoriesButton" onClick={this.props.refreshArticles}>
+            <Button bsStyle="warning" className="footer-button" id="refreshStoriesButton" onClick={this.props.refreshArticles}>
               Refresh
+            </Button>
+            <Button bsStyle="danger" className="footer-button" id="createStoryButton" onClick={this.props.toggleBreakingRefresh}>
+              {this.props.updateBreaking ? "Breaking News Refresh Off" : "Breaking News Refresh On"}
             </Button>
           </Nav>
         </Navbar>

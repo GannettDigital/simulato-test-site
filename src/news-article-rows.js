@@ -42,7 +42,7 @@ export default class NewsArticleRows extends React.Component {
   createArticleCol(currentArticle) {
     if (this.props.articles[currentArticle]) {
       return (
-        <Col xs={6} md={6}>
+        <Col sm={6} md={6}>
           {this.props.articles[currentArticle]}
         </Col>
       );
