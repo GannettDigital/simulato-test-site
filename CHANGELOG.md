@@ -1,3 +1,7 @@
+## 3.1.0
+
+Brian Fitzpatrick -  Updated vulnerable  dependencies
+
 ## 3.0.0
 
 Zachary Knox
