@@ -1,19 +1,6 @@
-## 3.1.0
+## 1.0.2 
 
-Brian Fitzpatrick -  Updated vulnerable  dependencies
-
-## 3.0.0
-
-Zachary Knox
-- Added categories concept
-- Switched to randomly ordering stories
-- Added ability to create stories
-- Added breaking news header—pulling from breakingNews category
-- Added option to refresh stories, and to turn off that refresh on the breaking news header
-
-## 2.0.0
-
-Brian Fitzpatrick - Abstracted the main layout, added a button for create stories, added tabs for stories
+Brian Fitzpatrick - Reverted to original site design
 
 ## 1.0.1
 

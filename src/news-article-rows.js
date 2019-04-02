@@ -1,10 +1,15 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
+import NewsArticle from './news-article.js';
+import ArticleData from './article-data.json';
 
 export default class NewsArticleRows extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      articles: ArticleData.map((article, index) => 
+        <NewsArticle id={`article${index + 1}`} heading={article.heading} text={article.text} />
+      ),
       currentArticle: 0
     };
     this.createArticles = this.createArticles.bind(this);
@@ -15,12 +20,9 @@ export default class NewsArticleRows extends React.Component {
   createArticles() {    
     let articleCols = [];
     let currentArticle = this.state.currentArticle;
-    let articlesLength = this.props.articles.length;
+    let articlesLength = this.state.articles.length;
     while(currentArticle < articlesLength) {
-      var article = this.props.articles[currentArticle];
-      if(this.props.tab === "home" || article.props.category === this.props.tab) {
-        articleCols.push(this.createArticleCol(currentArticle))
-      }
+      articleCols.push(this.createArticleCol(currentArticle))
       currentArticle++;
     }
     return this.createArticleRows(articleCols);
@@ -34,16 +36,16 @@ export default class NewsArticleRows extends React.Component {
       if (articleCols[i+1]) {
         col2 = articleCols[i+1]
       }
-      rows.push(<Row id={`ArticleRow${i}`} className="App-article-row">{col1}{col2}</Row>)
+      rows.push(<Row className="App-article-row">{col1}{col2}</Row>)
     }
     return rows;
   }
 
   createArticleCol(currentArticle) {
-    if (this.props.articles[currentArticle]) {
+    if (this.state.articles[currentArticle]) {
       return (
-        <Col sm={6} md={6}>
-          {this.props.articles[currentArticle]}
+        <Col xs={6} md={6}>
+          {this.state.articles[currentArticle]}
         </Col>
       );
     }

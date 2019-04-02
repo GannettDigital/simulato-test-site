@@ -1,6 +1,6 @@
 {
   "name": "simulato-test-site",
-  "version": "3.1.0",
+  "version": "1.0.2",
   "description": "A site to acceptance test simulato",
   "main": "index.js",
   "scripts": {
@@ -20,9 +20,15 @@
   "homepage": "https://github.com/GannettDigital/simulato-test-site#readme",
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "react": "^16.8.5",
+    "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.6",
-    "react-dom": "^16.8.5",
-    "react-scripts": "^2.1.8"
-  }
+    "react-dom": "^16.8.6",
+    "react-scripts": "2.1.8"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

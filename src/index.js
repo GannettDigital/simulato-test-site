@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -9,9 +8,9 @@ import registerServiceWorker from './registerServiceWorker';
 const rootDiv = document.getElementById('root');
 const secondDiv = document.getElementById('second-root');
 
-if(rootDiv) {
+if (rootDiv) {
     ReactDOM.render(<App setActive={1} />, document.getElementById('root'));
-} else if(secondDiv) {
+} else if (secondDiv) {
     ReactDOM.render(<App setActive={2} />, document.getElementById('second-root'));
 }
 registerServiceWorker();
