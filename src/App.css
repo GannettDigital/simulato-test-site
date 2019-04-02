@@ -1,10 +1,6 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  display: grid;
 }
 
 .App-header {
@@ -30,6 +26,8 @@
 
 .container-fluid {
   height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .News-article-text {
@@ -39,7 +37,7 @@
   overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.footer-button {
+  margin-top: 8px;
+  margin-left: 10px;
 }

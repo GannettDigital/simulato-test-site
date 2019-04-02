@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import './App.css';
 import NewsArticleRows from './news-article-rows.js';
 
@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Grid fluid>
+        <Container fluid>
           <Row className="App-header" id="siteHeader">
             <Col xs={12} md={12}>
               <header>
@@ -19,7 +19,7 @@ class App extends Component {
           <Row className="App-body">
             <NewsArticleRows />
           </Row>
-        </Grid>
+        </Container>
       </div>
     );
   }
