@@ -1,3 +1,7 @@
+## 1.0.2 
+
+Brian Fitzpatrick - Reverted to original site design
+
 ## 1.0.1
 
 Scott Gunther - Add source code from closed source repo
