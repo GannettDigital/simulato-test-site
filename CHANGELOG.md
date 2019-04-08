@@ -1,3 +1,7 @@
+## 1.0.3
+
+Scott Gunther - Disable preflight checks
+
 ## 1.0.2 
 
 Brian Fitzpatrick - Reverted to original site design
