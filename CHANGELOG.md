@@ -1,3 +1,7 @@
+## 1.2.0
+
+Brian Fitzpatrick - Re-enabled preflight checks and updated react scripts version
+
 ## 1.1.3
 
 Scott Gunther - Disable preflight checks
