@@ -1,6 +1,6 @@
 {
   "name": "simulato-test-site",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A site to acceptance test simulato",
   "main": "index.js",
   "scripts": {
