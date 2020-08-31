@@ -1,5 +1,5 @@
 environment:
-  nodejs_version: "8.9"
+  nodejs_version: "12.18"
 cache:
   - node_modules
 install:

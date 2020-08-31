@@ -1,3 +1,11 @@
+## 1.2.2
+
+Scott Gunther - update dependencies to fix security vulnerabilities 
+
+## 1.2.1
+
+Zach Knox - update dependencies to fix security vulnerabilities 
+
 ## 1.2.0
 
 Brian Fitzpatrick - Re-enabled preflight checks and updated react scripts version
